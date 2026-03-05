@@ -56,22 +56,8 @@ const skillCategories = [
     gradient: "from-emerald-500/20 to-teal-500/20",
   },
   {
-    title: "Data Science",
-    description: "Advanced modeling & math",
-    icon: Cpu,
-    skills: [
-      { name: "Machine Learning", icon: Cpu },
-      { name: "Data Modeling", icon: Database },
-      { name: "Scikit-Learn", icon: Code2 },
-      { name: "Statistical Analysis", icon: LineChart },
-      { name: "NumPy", icon: Table2 },
-      { name: "Jupyter", icon: Terminal },
-    ],
-    gradient: "from-orange-500/20 to-amber-500/20",
-  },
-  {
-    title: "Backend & Ops",
-    description: "System reliability & security",
+    title: "Dev & Ops",
+    description: "System reliability & tooling",
     icon: Server,
     skills: [
       { name: "PostgreSQL", icon: Database },
@@ -125,8 +111,8 @@ const SkillsSection = () => {
           </p>
         </motion.div>
 
-        {/* 3+2 Grid Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8">
+        {/* 2x2 Grid Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}
@@ -134,7 +120,6 @@ const SkillsSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`group ${index < 3 ? 'lg:col-span-2' : 'lg:col-span-3'}`}
             >
               <motion.div 
                 // --- HOVER & CLICK ANIMATIONS ---

@@ -120,9 +120,9 @@ const ExperienceCard = ({ exp }: { exp: any }) => {
     >
       <motion.div
         layout
-        animate={{ rotateY: isFlipped ? 180 : 0, height: isFlipped ? "720px" : "480px" }}
+        animate={{ rotateY: isFlipped ? 180 : 0, height: isFlipped ? "auto" : "auto" }}
         transition={{ duration: 0.8, type: "spring", stiffness: 80, damping: 20 }}
-        style={{ transformStyle: "preserve-3d" }}
+        style={{ transformStyle: "preserve-3d", minHeight: isFlipped ? "720px" : "480px" }}
         className="relative w-full"
       >
         {/* Mouse Spotlight Container - Corrected for Flip */}
